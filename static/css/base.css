@@ -1,0 +1,15 @@
+.logo{
+    width: 50px;
+}
+.body{
+    background: azure;
+}
+.main{
+    background: blanchedalmond;
+    width: 730px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.title-set{
+    text-align: center;
+}

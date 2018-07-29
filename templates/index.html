@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}首页{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+{% block main %}
+    <ul>
+        {% for question in questions %}
+            <li>
+                <div class="avantar-group">
+                    <img src="{{ url_for('static',filename='picture/title.png') }}" alt="" class="avater">
+                </div>
+                <div class="question-group" >
+                    <p class="question-title"><a href="{{ url_for('detail',question_id= question.id) }}">{{ question.title }}</a></p>
+                    <p class="question-title">{{ question.content }}</p>
+                    <div class="question-info">
+                        <span class="question-author">{{ question.author.username }}</span>
+                        <span class="question-time">{{ question.create_time }}</span>
+                    </div>
+                </div>
+            </li>
+            </ul>
+        {% endfor %}
+
+
+
+{#        <li>#}
+{#            <div class="avantar-group">#}
+{#                <img src="{{ url_for('static',filename='picture/title.png') }}" alt="" class="avater">#}
+{#            </div>#}
+{#            <div class="question-group" >#}
+{#                <p class="question-title"><a href="#">知了课堂</a></p>#}
+{#                <p class="question-title">知了课堂第四工段适度阿萨德回溯会读书UI的活塞胡丢爱上hi啥UI的辉煌UI等会我ihi都会奥委会对奥委dsadsadasdsadsadsadfHudshauidhuisah hsaui大发糊对晒单后苏爱华丢撒谎会</p>#}
+{#                <div class="question-info">#}
+{#                    <span class="question-author">知了</span>#}
+{#                    <span class="question-time">2017-5-13</span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </li>#}
+{#        <li>#}
+{#            <div class="avantar-group">#}
+{#                <img src="{{ url_for('static',filename='picture/title.png') }}" alt="" class="avater">#}
+{#            </div>#}
+{#            <div class="question-group" >#}
+{#                <p class="question-title"><a href="#">知了课堂</a></p>#}
+{#                <p class="question-title">知了课堂第四工段适度阿带回家似乎都灰度化岁安徽队撒谎会冻死啊会USA大辉啥会的贺岁会睡得UI核对撒谎回收萨德回溯会读书UI的活塞胡丢爱上hi啥UI的辉煌UI等会我ihi都会奥委会对奥委会</p>#}
+{#                <div class="question-info">#}
+{#                    <span class="question-author">知了</span>#}
+{#                    <span class="question-time">2017-5-13</span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </li>#}
+    </ul>
+{% endblock %}
